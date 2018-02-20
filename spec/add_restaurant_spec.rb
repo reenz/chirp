@@ -14,11 +14,11 @@ feature 'Add new restaurant' do
 
   scenario 'add multiple restaurants' do
     visit 'restaurants'
-    click_button 'New Restaurant'
+    click_link 'New Restaurant'
     fill_in :Name, :with => 'Rocket Sausages'
     fill_in :Description, :with => 'The best vegan sausages ever!! (Not veggie).'
     click_button 'Add Restaurant'
-    click_button 'New Restaurant'
+    click_link 'New Restaurant'
     fill_in :Name, :with => 'Super Meat Store'
     fill_in :Description, :with => 'Ironically this is a big vegan restaurant too.
     But a lot of confused meat eaters visit and a are highly disappointed...'
