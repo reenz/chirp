@@ -59,7 +59,7 @@ I want to be able to see all the reviews and the average rating for each restaur
 ```
 As a user
 So I can easily compare restaurants
-Each restaurant should have a name and default rating
+Each restaurant should have a name and a rating
 ```
 
 ```
