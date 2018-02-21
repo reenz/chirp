@@ -1,5 +1,7 @@
 <h1>New Restaurant</h1>
 
+<p id="notice"><%= params[:notice] %></p>
+
 <%= render 'form', restaurant: @restaurant %>
 
 <%= link_to 'Back', restaurants_path %>

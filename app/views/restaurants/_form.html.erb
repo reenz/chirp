@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :restaurant_description %>
+    <%= form.text_area :description, id: :restaurant_description, value: session[:description] %>
   </div>
 
   <div class="actions">
