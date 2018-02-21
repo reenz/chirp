@@ -11,34 +11,11 @@
 </p>
 
 <h2>Reviews</h2>
-<% @restaurant.reviews.each do |review| %>
-  <p>
-    <strong>Rating:</strong>
-    <%= review.rating %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= review.comment %>
-  </p>
-<% end %>
+<%= render @restaurant.reviews %>
 
 
 <h2>Add a review:</h2>
-<%= form_with(model: [ @restaurant, @restaurant.reviews.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :rating %><br>
-    <%= form.text_field :rating %>
-  </p>
-  <p>
-    <%= form.label :comment %><br>
-    <%= form.text_area :comment %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-
+<%= render 'reviews/form' %>
 
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
