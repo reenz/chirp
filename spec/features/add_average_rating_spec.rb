@@ -1,5 +1,5 @@
 feature 'show average ratings' do
-  scenario 'after adding several ratings, the average should appear on a restaurants page' do
+  scenario 'after adding several ratings, the average should appear on the individual page' do
     add_restaurant('Nandos', 'Some chicken in some form')
     page.all(:link, 'Show')[0].click
     add_rating(5)
@@ -26,7 +26,7 @@ feature 'show average ratings' do
      expect(page).to have_content('3.3')
   end
 
-  scenario "displays 'no rating yet' if there is no rating" do
+  scenario 'displays "no rating yet" if there is no rating on the individual page' do
     add_restaurant('Leon','Lots of healthy food')
     click_link ('Show')
     expect(page).to have_content('no ratings yet')
