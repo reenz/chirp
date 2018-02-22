@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 feature 'Add new restaurant' do
   scenario 'add multiple restaurants' do
     add_restaurant('Rocket Sausages', 'The best vegan sausages ever!! (Not veggie).')

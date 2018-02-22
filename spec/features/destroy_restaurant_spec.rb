@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 feature 'Add restaurant and destroy it' do
   scenario 'it deletes the restaurant content' do
     add_restaurant('Indian Sweets', 'Best rasmalai')

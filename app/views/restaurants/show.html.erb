@@ -10,6 +10,11 @@
   <%= @restaurant.description %>
 </p>
 
+<p>
+   <strong>Average Rating</strong>
+   <%= @restaurant.reviews.average(:rating).to_f.round(1) %>
+</p>
+
 <h2>Reviews</h2>
 
 <% if  @restaurant.reviews.count.zero? %>
