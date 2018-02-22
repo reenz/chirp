@@ -5,5 +5,12 @@ feature 'Add a review' do
     page.all(:link, 'Show')[1].click
     fill_in :rating, :with => 5
     click_button('Create Review')
+    fill_in :rating, :with => 2
+    fill_in :comment, :with => 'Bad vegetables'
+    click_button('Create Review')
+    expect(page).to have_content('5')
+    expect(page).to have_content('2')
+    expect(page).to have_content('Bad vegetables')
+    expect(page).not_to have_content('Meat and Egg')
   end
 end
