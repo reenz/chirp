@@ -17,7 +17,8 @@
       <tr>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.description %></td>
-        <td><%= restaurant.reviews.average(:rating).to_f.round(1) %></td>
+        <td><% rating = restaurant.reviews.average(:rating) %>
+            <%= rating.nil? ?  'no ratings yet' : rating.round(1)  %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
         <td><%= link_to 'Destroy Restaurant', restaurant, method: :delete  %></td>
