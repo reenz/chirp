@@ -3,7 +3,8 @@ feature 'Add a review' do
     add_restaurant('Meat and Egg', 'Poached eggs on a lovely steak')
     add_restaurant('Lovely Veggies', 'Home-grown stuff for veggie lovers')
     page.all(:link, 'Show')[1].click
-    fill_in :rating, :with => 5
+    expect(page).to have_content('aaaaaaaaaaaaaaa')
+    fill_in :Rating, :with => 5
     click_button('Create Review')
     fill_in :rating, :with => 2
     fill_in :comment, :with => 'Bad vegetables'
