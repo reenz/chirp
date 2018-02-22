@@ -10,6 +10,11 @@
   <%= @restaurant.description %>
 </p>
 
+<p>
+   <strong>Average Rating</strong>
+   <%= @restaurant.reviews.average(:rating) %>
+</p>
+
 <h2>Reviews</h2>
 <%= render @restaurant.reviews %>
 
