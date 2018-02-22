@@ -1,4 +1,4 @@
-require 'rails_helper'
+
 
 feature 'Add new restaurant' do
   scenario 'add multiple restaurants' do
