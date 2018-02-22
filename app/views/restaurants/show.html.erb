@@ -13,7 +13,7 @@
 <h2>Reviews</h2>
 
 <% if  @restaurant.reviews.count.zero? %>
-  <h3>"no ratings yet"</h3> 
+  <h3>no ratings yet</h3> 
 <% else %>
   <%= render @restaurant.reviews %>
 <% end %>
