@@ -17,14 +17,4 @@ feature 'Add new restaurant' do
     expect(Restaurant.find_by description: 'Yuuuuuuge portions!').to be_nil
   end
 
-  scenario "displays 'no rating yet' if there is no rating" do
-    add_restaurant('Leon','Lots of healthy food')
-    click_link ('Show')
-    p @restaurant
-    expect(page).to have_content('no ratings yet')
-    expect(page).to have_content('Leon')
-    expect(page).to have_content('Lots of healthy food')
-  end
-
-
 end
