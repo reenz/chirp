@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Restaurant, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Restaurant, type: :model do
+  describe 'Validations' do
+    it "Can't add a restaurant without a name" do
+      expect{ Restaurant.create(description: 'a description') }.to_not change{Restaurant.count}
+    end
+  end
 end
