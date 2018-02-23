@@ -5,7 +5,7 @@ feature 'User Sign-up' do
     fill_in 'user[password]' ,:with => "password"
     fill_in "user[password_confirmation]", :with => "password"
     click_button "Sign up"
-    expect(page).to have_current_path('/restaurants')
+    expect(page).to have_current_path('/')
     expect(page).to have_content('Welcome! You signed up successfully')
   end
 end
