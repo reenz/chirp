@@ -7,3 +7,8 @@
   <strong>Comment:</strong>
   <%= review.comment %>
 </p>
+
+<p>
+  <strong>Reviewer:</strong>
+  <%= User.find(review.user_id).email %>
+</p>

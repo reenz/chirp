@@ -1,5 +1,6 @@
 feature 'Add a review' do
   scenario 'Store review in database' do
+  sign_up("user@test.com", "password", "password")
    add_restaurant('Meat and Egg', 'Poached eggs on a lovely steak')
    page.all(:link, 'Show')[0].click
    expect{ add_rating(5) }.to change{ Review.count }
@@ -21,6 +22,7 @@ feature 'Add a review' do
 
 feature 'no rating is added to the review' do
   before do
+    sign_up("user@test.com", "password", "password")  
     add_restaurant('Lovely Veggies', 'Home-grown stuff for veggie lovers')
     click_link 'Show'
   end
