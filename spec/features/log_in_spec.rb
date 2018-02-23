@@ -5,6 +5,6 @@ feature 'User login' do
     fill_in 'user[password]' ,:with => "password"
     fill_in "user[password_confirmation]", :with => "password"
     click_button "Sign up"
-    expect(page).to have_content("user@test.com page")
+    expect(page).to have_content("user@test.com")
   end
 end
