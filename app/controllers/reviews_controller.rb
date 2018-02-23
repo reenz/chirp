@@ -5,10 +5,10 @@ def create
 
   respond_to do |format|
     if @review.save
-      format.html { redirect_to restaurant_path(@restaurant), notice: 'Review was successfully added.' }      
+      format.html { redirect_to restaurant_path(@restaurant), notice: 'Review was successfully added.' }
     else
       session[:comment] = params[:review][:comment]
-      format.html { redirect_to restaurant_path(@restaurant), notice: 'Must provide a rating' }
+      format.html { redirect_to restaurant_path(@restaurant), notice: 'Must provide a rating between 1 and 5' }
     end
   end
 
