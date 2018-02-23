@@ -4,6 +4,6 @@ feature 'Rating validation' do
     click_link 'Show'
     add_rating(7)
     expect(page).not_to have_content('7')
-    expect(page).to have_content('Review must be between 1 and 5')
+    expect(page).to have_content('Must provide a rating between 1 and 5')
   end
 end

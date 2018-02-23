@@ -27,10 +27,3 @@
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
-
-
-
-
-<% @restaurant.errors.full_messages.each do |message| %>
-  <li><%= message %></li>
-<% end %>
