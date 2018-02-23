@@ -33,8 +33,8 @@ class RestaurantsController < ApplicationController
         format.json { render :index, status: :created, location: @restaurant }
       else
         session[:description] = params[:restaurant][:description]
-        # format.html { redirect_to action: 'new', notice: 'Must enter a restaurant name.' }
-        # format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+        format.html { redirect_to action: 'new', notice: 'Must enter a restaurant name.' }
+        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
       end
     end
   end
