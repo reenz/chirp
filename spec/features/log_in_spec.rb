@@ -7,6 +7,6 @@ feature 'User Logout' do
     click_button "Sign up"
     click_link 'Logout'
     expect(page).to have_current_path('/')
-    expect(page).to have_content('You have logged out: see you soon!')
+    expect(page).to have_content('Signed out successfully.')
   end
 end
