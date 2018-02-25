@@ -1,29 +1,38 @@
-# README
+# CHIRP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Tom Grand](https://github.com/Tagrand) || [Reena Sharma](https://github.com/reenz) || [Agata Golebiewska](https://github.com/MissDove) || [Dominic Vernon](https://github.com/domvernon)
 
-Things you may want to cover:
+#### GOAL OF THE PROJECT
 
-* Ruby version
+The main goal of this project was to create a clone of Yelp by using Ruby on Rails and to learn the following:
+- creating Rails applications
+- the structure of Rails app (MVC, the router, helpers)
+- TDD in Rails with RSpec and Capybara
+- Associations
+- Validations
 
-* System dependencies
+##### Version 1 - MVP
 
-* Configuration
+For the initial version we want to duplicate the core functionality of Yelp - users should be presented with a list of restaurants which they can leave reviews for.
 
-* Database creation
 
-* Database initialization
+###### V1 Specification
+* Visitors can create new restaurants using a form, specifying a name and description
+* Restaurants can be edited and deleted
+* Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
+* The restaurants listings page should display all the reviews, along with the average rating of each restaurant
+* Validations should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
-* How to run the test suite
+##### Version 2 - User login
 
-* Services (job queues, cache servers, search engines, etc.)
+Adding a user login system by adding a popular gem - Devise - to accelerate the implementation of our user system.
 
-* Deployment instructions
+###### V2 Specification
+* Users can register/login
+* Some indication should be given on the page (as part of the layout) whether the user is currently logged in, along with links to the available actions (i.e. Logout/Edit account is signed in, otherwise Sign In/Sign Up)
+* The email address of the reviewer should be displayed as part of the review
 
-* ...
-
-### CHIRP
+#### User Stories
 
 ```
 As a user
@@ -67,3 +76,5 @@ As a user
 So I can submit a helpful review
 When I submit my review, it should always have a rating, the comment is optional
 ```
+
+#### TEAM WORK
